@@ -1,7 +1,6 @@
 package com.Library.Management;
 import java.util.Scanner;
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class Library implements LibraryOperations {
     private ArrayList<Book> books;
@@ -17,17 +16,13 @@ public class Library implements LibraryOperations {
 
     @Override
     public void removeBook(String ISBN) {
-        Iterator<Book> iterator = books.iterator();
-        while (iterator.hasNext()) {
-            Book book = iterator.next();
-            if (book.getISBN().equals(ISBN)) {
-                iterator.remove();
+            boolean removed = books.removeIf(book -> book.getISBN().equals(ISBN));
+            if (removed) {
                 System.out.println("Book with ISBN " + ISBN + " removed.");
-                return;
+            } else {
+                System.out.println("Book with ISBN " + ISBN + " not found.");
             }
         }
-        System.out.println("Book with ISBN " + ISBN + " not found.");
-    }
 
     @Override
     public void updateBook(String ISBN) {
