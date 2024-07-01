@@ -28,7 +28,7 @@ public class LibraryManagementSystem{
                     String ISBN = scanner.nextLine();
                     System.out.println("Enter number of copies:");
                     int numberOfCopies = scanner.nextInt();
-                    scanner.nextLine(); // consume newline
+                    scanner.nextLine(); 
 
                     Book newBook = new Book(title, author, ISBN, numberOfCopies);
                     library.addBook(newBook);
