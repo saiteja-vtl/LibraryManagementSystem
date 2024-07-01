@@ -40,7 +40,7 @@ public class LibraryManagementSystem{
                     System.out.println("Enter ISBN of the book to remove:");
                     String isbnToRemove = scanner.nextLine();
                     library.removeBook(isbnToRemove);
-                    System.out.println("Book removed successfully (if it existed).");
+                    System.out.println("Book removed successfully.");
                     break;
 
                 case 3:
@@ -48,7 +48,7 @@ public class LibraryManagementSystem{
                     System.out.println("Enter ISBN of the book to update:");
                     String isbnToUpdate = scanner.nextLine();
                     library.updateBook(isbnToUpdate);
-                    System.out.println("Book updated successfully (if it existed).");
+                    System.out.println("Book updated successfully");
                     break;
 
                 case 4:
