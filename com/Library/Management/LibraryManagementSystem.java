@@ -2,12 +2,12 @@ package com.Library.Management;
 
 import java.util.Scanner;
 
-public class LibraryManagementSystem{
+public class LibraryManagementSystem {
     public static void main(String[] args) {
         Library library = new Library();
         Scanner scanner = new Scanner(System.in);
 
-
+        while (true) {
             System.out.println("Library Management System:");
             System.out.println("1. Add Book");
             System.out.println("2. Remove Book");
@@ -28,7 +28,7 @@ public class LibraryManagementSystem{
                     String ISBN = scanner.nextLine();
                     System.out.println("Enter number of copies:");
                     int numberOfCopies = scanner.nextInt();
-                    scanner.nextLine(); 
+                    scanner.nextLine();
 
                     Book newBook = new Book(title, author, ISBN, numberOfCopies);
                     library.addBook(newBook);
@@ -66,5 +66,6 @@ public class LibraryManagementSystem{
                     System.out.println("Invalid choice. Please try again.");
             }
 
+        }
     }
 }
